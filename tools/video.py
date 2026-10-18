@@ -143,13 +143,14 @@ def scene_portal(s, t):
     put(img, l, p, dy)
     rh = (ph - 66) // max(1, len(rows))
     fr = R.font(None, 32, "SemiBold"); fp = R.font(None, 26, "SemiBold")
+    times = s.get("row_times") or [0.9 + i * 0.6 for i in range(len(rows))]
     for i, r in enumerate(rows):
         cy = y + 66 + i * rh + rh // 2
-        p, dy = anim(t, 0.9 + i * 0.6)
+        p, dy = anim(t, times[i])
         l = layer(); dl = ImageDraw.Draw(l)
         dl.text((PAD + 36, cy), r["label"], font=fr, fill=R.NAVY_900, anchor="lm")
         put(img, l, p, dy * 0.5)
-        sp = ease((t - (1.25 + i * 0.6)) / 0.25)
+        sp = ease((t - (times[i] + 0.35)) / 0.25)
         if sp > 0:
             st = r["status"]; col = R.STATUS_COLOURS.get(st.lower(), R.CYAN)
             l = layer(); dl = ImageDraw.Draw(l)
