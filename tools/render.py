@@ -337,7 +337,7 @@ def render_compare(g, out_path):
 
 
 STATUS_COLOURS = {"done": MINT, "complete": MINT, "approved": MINT, "in date": MINT, "booked": CYAN, "scheduled": CYAN,
-                  "chased": AMBER, "due": AMBER, "awaiting": AMBER, "overdue": CORAL, "missing": CORAL}
+                  "chased": AMBER, "due": AMBER, "awaiting": AMBER, "overdue": CORAL, "missing": CORAL, "suspended": CORAL}
 
 
 def render_portal(g, out_path):

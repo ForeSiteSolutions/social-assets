@@ -5,7 +5,7 @@ Usage: python3 tools/video.py video.json out.mp4
 
 video.json: {"scenes": [ ... ]}, each scene has "type" and "seconds":
   {"type": "hook",   "seconds": 3,   "text": "Something breaks at 2am.", "bg": "cyan"|"navy"}
-  {"type": "lines",  "seconds": 4,   "eyebrow": "...", "headline": "...", "lines": ["a", "b", "c"]}
+  {"type": "lines",  "seconds": 4,   "eyebrow": "...", "headline": "...", "lines": ["a", "b", "c"], "line_times": [0.9, 1.45, 2.0]}
   {"type": "portal", "seconds": 5,   "headline": "...", "rows": [{"label": "...", "status": "Done"}]}
   {"type": "end",    "seconds": 3.5, "headline": "Every call logged."}
 """
@@ -110,8 +110,9 @@ def scene_lines(s, t):
     put(img, l, p, dy)
     y += 50
     fl = R.font(None, 40, "Regular")
+    ltimes = s.get("line_times") or [0.9 + i * 0.55 for i in range(3)]
     for i, line in enumerate(s.get("lines", [])[:3]):
-        p, dy = anim(t, 0.9 + i * 0.55)
+        p, dy = anim(t, ltimes[i])
         l = layer(); dl = ImageDraw.Draw(l)
         R.tick(dl, PAD, y + 26, R.CYAN, R.CYAN_2, (0, 180, 216, 46))
         dl.text((PAD + 64, y), line, font=fl, fill=R.ON_DARK)

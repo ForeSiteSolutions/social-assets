@@ -1,0 +1,12 @@
+{"scenes": [
+ {"type": "hook", "seconds": 2.4, "bg": "cyan", "text": "Your contractor is on site tomorrow."},
+ {"type": "lines", "seconds": 4.8, "eyebrow": "Before they arrive", "headline": "Are they still compliant?", "lines": ["Insurance in date?", "Accreditations current?", "Health and safety paperwork?"], "line_times": [0.4, 1.85, 3.15]},
+ {"type": "hook", "seconds": 2.2, "bg": "navy", "text": "With ForeSite, you don't have to wonder."},
+ {"type": "portal", "seconds": 11.6, "headline": "Checked automatically, every day", "rows": [
+   {"label": "Insurance and accreditations", "status": "In date"},
+   {"label": "Expiry coming up: reminder sent", "status": "Chased"},
+   {"label": "Document lapsed", "status": "Suspended"},
+   {"label": "Renewal uploaded and approved", "status": "Approved"}],
+   "row_times": [0.5, 3.5, 6.75, 9.9]},
+ {"type": "end", "seconds": 6.5, "headline": "Compliant before they\nset foot on site."}
+]}
