@@ -1,0 +1,5 @@
+{"week":"2026-11-09","graphics":[
+{"slug":"mon-quotes-request-to-approval","layout":"compare","eyebrow":"Quotes","headline":"From request to approval, one route","before":["Quotes buried in email threads","Approval by forwarded message","Nobody sure where it stands"],"after":["Quotes raised by work type","Approval recorded on the quote","POs with their own numbering"]},
+{"slug":"wed-compliance-evidence","layout":"portal","eyebrow":"Compliance Evidence","headline":"Compliance, with the evidence on file","rows":[{"label":"Riverside Court","status":"In date"},{"label":"Northgate Depot","status":"Due"},{"label":"Ashford Retail Park","status":"Chased"},{"label":"Kingsway House","status":"In date"}]},
+{"slug":"fri-chasing-paperwork","layout":"question","eyebrow":"Chasing Paperwork","headline":"Who chases when the paperwork is late?","answer":"ForeSite chases automatically. A person steps in only if it escalates."}
+]}
